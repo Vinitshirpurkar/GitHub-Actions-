@@ -1,4 +1,4 @@
-name: Second_workflow
+name: Third_workflow
 on: push
 
 jobs: 
@@ -14,7 +14,19 @@ jobs:
       - name: Get npm install 
         uses: actions/setup-node@v4
         with: 
-          node-version: 18
+           node-version: 18
+  secondjob:
+    needs: myjob
+    runs-on: ubuntu-latest
+    steps: 
+      - name : Print Second Message 
+        run: echo "this is second Message"
+      
+      - name: Get npm install 
+        uses: actions/setup-node@v4
+        with: 
+           node-version: 18
+  
+      
 
-      - name: Second Message 
-        run : echo "This is second message"
+      
