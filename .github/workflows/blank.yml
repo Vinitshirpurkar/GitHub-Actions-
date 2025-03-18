@@ -1,14 +1,14 @@
-name: First_workflow
-on: workflow_dispatch
+name: First Workflow
 
-jobs: 
-  my_job: 
-    runs-on: ubuntu-latest
-    steps: 
-     - name : Print Message 
-     - run : echo "Hi" 
+on: workflow_dispatch  # Allows manual trigger
 
-     - name: Another Print 
-     - run : echo "Hello" 
+jobs:
+  my_job:  # Job name
+    runs-on: ubuntu-latest  # Define runner OS
 
-     
+    steps:
+      - name: Print Hello
+        run: echo "Hello"
+
+      - name: Print Hi
+        run: echo "Hi"
