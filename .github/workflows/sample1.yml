@@ -1,0 +1,26 @@
+name: Second_workflow
+on: push
+
+jobs: 
+  myjob: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: First step
+        run: echo "This is first step"
+
+      - name : Get Code 
+        uses: actions/checkout@v4
+
+      - name: Get npm install 
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+
+      - name: Get npm install
+        run: npm install 
+
+      - name: dependecies
+        run: npm run build
+
+      - name: deploy
+        run: npm run deploy
