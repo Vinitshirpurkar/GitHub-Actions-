@@ -16,11 +16,5 @@ jobs:
         with: 
           node-version: 18
 
-      - name: Get npm install
-        run: npm install 
-
-      - name: dependecies
-        run: npm run build
-
-      - name: deploy
-        run: npm run deploy
+      - name: Second Message 
+        run : echo "This is second message"
